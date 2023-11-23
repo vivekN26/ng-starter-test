@@ -20,7 +20,7 @@ export class ShellComponent implements OnInit {
 
   getMaximum() {
     // get maximum value from given array
-    return Math.min(...this.numbersArray);
+    return Math.max(...this.numbersArray);
   }
 
   getArea() {

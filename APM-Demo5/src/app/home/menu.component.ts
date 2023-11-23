@@ -25,6 +25,7 @@ export class MenuComponent implements OnInit {
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
+    this.getMinValue();
   }
 
   logOut(): void {
@@ -32,7 +33,7 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['/welcome']);
   }
 
-  getMaxValue() {
+  getMinValue() {
     return Math.min(...this.numberList);
   }
 }
