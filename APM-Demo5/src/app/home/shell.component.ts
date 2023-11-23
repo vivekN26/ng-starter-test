@@ -7,7 +7,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ShellComponent implements OnInit {
-  numberList = [1, 6, 3, 2, 9, 10];
+  numbersArray = [1, 6, 3, 2, 9, 10];
   area: string;
 
   constructor() { }
@@ -16,16 +16,29 @@ export class ShellComponent implements OnInit {
     this.getMaximum();
     this.getArea();
     console.log('testing some random chnges');
+    this.getMinimumNumber();
   }
 
   getMaximum() {
     // get maximum value from given array
-    return Math.min(...this.numberList);
+    return Math.min(...this.numbersArray);
   }
 
   getArea() {
     let a = 4 -6;
     console.log(a);
+  }
+
+  getMinimumNumber() {
+    // get minimum number from the list
+      let min = this.numbersArray[0];
+      for (let i = 1; i < this.numbersArray.length; i++) {
+        if (this.numbersArray[i] < min) {
+          min = this.numbersArray[i];
+        }
+      }
+      return min;
+  
   }
 
 }
