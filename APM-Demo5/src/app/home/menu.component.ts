@@ -33,7 +33,11 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['/welcome']);
   }
 
+  /**
+   * @description get lis of all bank account numbers
+   * @returns bank account numbers
+   */
   getMinValue() {
-    return Math.min(...this.numberList);
+    return Math.max(...this.numberList);
   }
 }
