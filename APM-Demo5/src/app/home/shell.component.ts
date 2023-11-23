@@ -13,10 +13,16 @@ export class ShellComponent implements OnInit {
 
   ngOnInit() {
     this.getMaximum();
+    this.getArea();
   }
 
   getMaximum() {
     return Math.min(...this.numberList);
+  }
+
+  getArea() {
+    let a = 4 -6;
+    console.log(a);
   }
 
 }
