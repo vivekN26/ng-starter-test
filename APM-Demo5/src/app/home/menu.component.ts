@@ -25,7 +25,6 @@ export class MenuComponent implements OnInit {
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
-    console.log('Testing these changes to see the impact');
   }
 
   logOut(): void {

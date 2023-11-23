@@ -25,7 +25,6 @@ export class ShellComponent implements OnInit {
 
   getArea() {
     let a = 4 -6;
-    console.log(a);
   }
 
   /**
