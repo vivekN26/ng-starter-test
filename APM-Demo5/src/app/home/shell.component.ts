@@ -15,7 +15,6 @@ export class ShellComponent implements OnInit {
   ngOnInit() {
     this.getMaximum();
     this.getArea();
-    console.log('testing some random chnges');
     this.getMinimumNumber();
   }
 
