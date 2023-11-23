@@ -8,7 +8,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class ShellComponent implements OnInit {
   numbersArray = [1, 6, 3, 2, 9, 10];
-  area: string;
+  area: number;
+  length = 10;
+  width = 40;
+
 
   constructor() { }
 
@@ -20,6 +23,8 @@ export class ShellComponent implements OnInit {
   const result1 = this.complexNestedLogic(8);
   const result2 = this.complexNestedLogic(-9);
   const result3 = this.complexNestedLogic(0);
+  this.area = this.getArea(this.length, this.width);
+  document.getElementById('my-area').innerHTML = this.area.toString();
   }
 
   getMaximum() {
@@ -98,5 +103,10 @@ export class ShellComponent implements OnInit {
     return result;
   }
 
+
+  getArea(length, width) {
+    let area = length * width;
+    return area;
+  }
 
 }
