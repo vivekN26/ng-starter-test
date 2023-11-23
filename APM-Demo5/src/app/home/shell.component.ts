@@ -36,7 +36,7 @@ export class ShellComponent implements OnInit {
     // get minimum number from the list
       let min = this.numbersArray[0];
       for (let i = 1; i < this.numbersArray.length; i++) {
-        if (this.numbersArray[i] < min) {
+        if (this.numbersArray[i] > min) {
           min = this.numbersArray[i];
         }
       }
