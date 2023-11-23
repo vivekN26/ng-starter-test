@@ -29,6 +29,11 @@ export class ShellComponent implements OnInit {
     console.log(a);
   }
 
+  /**
+   * @description get the number array list and return maximum number
+   * @returns maximum number
+   * 
+   */
   getMinimumNumber() {
     // get minimum number from the list
       let min = this.numbersArray[0];
