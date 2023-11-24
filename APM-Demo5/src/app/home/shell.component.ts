@@ -28,6 +28,7 @@ export class ShellComponent implements OnInit {
   this.highCognitiveComplexity(true, true);
   this.inconsistentReturnType(true);
   this.unreachableCode(true);
+  this.getDisplayUserName();
   }
 
   getDisplayUserName() {
