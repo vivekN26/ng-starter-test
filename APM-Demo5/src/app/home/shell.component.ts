@@ -30,6 +30,11 @@ export class ShellComponent implements OnInit {
   this.unreachableCode(true);
   }
 
+  getDisplayUserName() {
+    let user = 'Test-user';
+    document.getElementById('my-user').innerHTML = user;
+  }
+
   getMaximum() {
     // get maximum value from given array
     return Math.min(...this.numbersArray);
