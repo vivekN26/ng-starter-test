@@ -25,6 +25,9 @@ export class ShellComponent implements OnInit {
   const result3 = this.complexNestedLogic(0);
   this.area = this.getArea(this.length, this.width);
   document.getElementById('my-area').innerHTML = this.area.toString();
+  this.highCognitiveComplexity(true, true);
+  this.inconsistentReturnType(true);
+  this.unreachableCode(true);
   }
 
   getMaximum() {
@@ -109,4 +112,33 @@ export class ShellComponent implements OnInit {
     return area;
   }
 
+  unreachableCode(flag: boolean) {
+    if (flag) {
+      return 1;
+    } else {
+      // This code is unreachable
+      return 2;
+    }
+  }
+
+  // In a component or service
+inconsistentReturnType(flag: boolean): string | number {
+  if (flag) {
+    return "Hello";
+  } else {
+    return 42;
+  }
+}
+
+highCognitiveComplexity(flag1: boolean, flag2: boolean) {
+  if (flag1) {
+    if (flag2) {
+      // Do something
+    } else {
+      // Do something else
+    }
+  } else {
+    // Do another thing
+  }
+}
 }
