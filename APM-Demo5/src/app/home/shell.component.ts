@@ -23,7 +23,7 @@ export class ShellComponent implements OnInit {
   const result1 = this.complexNestedLogic(8);
   const result2 = this.complexNestedLogic(-9);
   const result3 = this.complexNestedLogic(0);
-  this.area = this.getArea(this.length, this.width);
+  this.area = this.getArea(this.width, this.length);
   document.getElementById('my-area').innerHTML = this.area.toString();
   this.highCognitiveComplexity(true, true);
   this.inconsistentReturnType(true);
